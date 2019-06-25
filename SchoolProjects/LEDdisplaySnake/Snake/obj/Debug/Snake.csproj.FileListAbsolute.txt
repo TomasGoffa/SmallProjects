@@ -1,9 +1,0 @@
-E:\Projects\CSharp\Hadik\Snake\bin\Debug\Snake.exe
-E:\Projects\CSharp\Hadik\Snake\bin\Debug\Snake.pdb
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.csprojAssemblyReference.cache
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.Form1.resources
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.Properties.Resources.resources
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.csproj.GenerateResource.cache
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.csproj.CoreCompileInputs.cache
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.exe
-E:\Projects\CSharp\Hadik\Snake\obj\Debug\Snake.pdb
