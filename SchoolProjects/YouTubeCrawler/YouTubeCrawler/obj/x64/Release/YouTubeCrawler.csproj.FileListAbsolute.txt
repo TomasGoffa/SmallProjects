@@ -1,0 +1,17 @@
+E:\Projects\Github_Init\YouTubeCrawler\bin\Release\YouTubeCrawler.exe.config
+E:\Projects\Github_Init\YouTubeCrawler\bin\Release\YouTubeCrawler.exe
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.csprojAssemblyReference.cache
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\UserInterface\DatabaseSearchView.baml
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\Utilities\Styles.baml
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\UserInterface\DatabaseSearchView.g.cs
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\UserInterface\VideoCrawlerView.g.cs
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\App.g.cs
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler_MarkupCompile.cache
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler_MarkupCompile.lref
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\UserInterface\VideoCrawlerView.baml
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.g.resources
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.Properties.Resources.resources
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.csproj.GenerateResource.cache
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.csproj.CoreCompileInputs.cache
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.csproj.CopyComplete
+E:\Projects\Github_Init\YouTubeCrawler\YouTubeCrawler\obj\x64\Release\YouTubeCrawler.exe

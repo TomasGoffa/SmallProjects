@@ -1,0 +1,7 @@
+6:50:01 PM***** ERROR *****
+System.ArgumentException: Parameter is not valid.
+   at System.Drawing.Image.get_Width()
+   at System.Drawing.Bitmap.GetHbitmap(Color background)
+   at System.Drawing.Bitmap.GetHbitmap()
+   at KohonenNeuralNetwork.Converters.ToBitmapSource(Bitmap image) in E:\Projects\Github_Init\KohonenNeuralNetwork\KohonenNeuralNetwork\Utilities\Converters.cs:line 28
+   at KohonenNeuralNetwork.MainWindowViewModel.LoadLastImageCommandHandler() in E:\Projects\Github_Init\KohonenNeuralNetwork\KohonenNeuralNetwork\UserInterface\MainWindowViewModel.cs:line 100

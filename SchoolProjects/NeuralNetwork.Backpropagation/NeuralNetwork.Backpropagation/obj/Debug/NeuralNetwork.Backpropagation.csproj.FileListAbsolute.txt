@@ -1,0 +1,7 @@
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\obj\Debug\NeuralNetwork.Backpropagation.csprojAssemblyReference.cache
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\obj\Debug\NeuralNetwork.Backpropagation.csproj.CoreCompileInputs.cache
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\bin\Debug\NeuralNetwork.Backpropagation.exe.config
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\bin\Debug\NeuralNetwork.Backpropagation.exe
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\bin\Debug\NeuralNetwork.Backpropagation.pdb
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\obj\Debug\NeuralNetwork.Backpropagation.exe
+E:\Projects\Github_Init\NeuralNetwork.Backpropagation\NeuralNetwork.Backpropagation\obj\Debug\NeuralNetwork.Backpropagation.pdb

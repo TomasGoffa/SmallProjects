@@ -1,0 +1,143 @@
+﻿<Window x:Class="MiloRobot.RemoteControl.UserInterface.Mp3Player"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiloRobot.RemoteControl.UserInterface"
+        mc:Ignorable="d"
+        Title="Music Player" Height="465" Width="300"
+        ResizeMode="NoResize"
+        MouseLeftButtonDown="WindowMouseLeftButtonDown"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="2"
+        BorderBrush="Black"
+        WindowStyle="None"
+        Background="#222222">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition Height="320" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="InsertGoogleKeyTextBlock"
+                   Grid.Row="0"
+                   Width="240"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Text="Choose song which Milo will play."
+                   Style="{DynamicResource ResourceKey=WindowMessageStyle}" />
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+
+            <RadioButton Name="TwinkleLittleStar"
+                         Grid.Row="1"
+                         Content="Twinkle twinkle little star"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+
+            <RadioButton Name="FarmerDonald"
+                         Grid.Row="2"
+                         Content="Old MacDonald had a farm"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+
+            <RadioButton Name="BingoDogSong"
+                         Grid.Row="3"
+                         Content="Bingo dog song"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+
+            <RadioButton Name="FiveLittleMonkeys"
+                         Grid.Row="4"
+                         Content="Five little monkeys"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+
+            <RadioButton Name="FiveLittleDucks"
+                         Grid.Row="5"
+                         Content="Five Little Ducks"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+
+            <RadioButton Name="ItsyBitsySpider"
+                         Grid.Row="6"
+                         Content="Itsy bitsy spider"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+
+            <RadioButton Name="LittleSnowflake"
+                         Grid.Row="7"
+                         Content="Little snowflake"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+            <RadioButton Name="Surprise"
+                         Grid.Row="8"
+                         Content="Surprise"
+                         HorizontalAlignment="Left"
+                         Width="240"
+                         Margin="30,0,0,0"
+                         Style="{DynamicResource ResourceKey=RadioButtonStyle}" />
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Button Name="PlaySongBtn"
+                    Grid.Column="0"
+                    HorizontalAlignment="Left"
+                    Margin="30,0,0,0"
+                    Width="100"
+                    Content="Play song"
+                    Click="PlaySongBtn_Click"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="CloseBtn"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,30,0"
+                    Width="100"
+                    Content="Close"
+                    Click="CloseBtn_Click"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" />
+        </Grid>
+    </Grid>
+</Window>

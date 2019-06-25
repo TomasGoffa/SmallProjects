@@ -1,0 +1,17 @@
+Before you run this code you have to install following packages:
+	pip install --upgrade pip
+	pip install –-upgrade setuptools wheel
+	pip install –-upgrade sphinx
+	pip install –-upgrade pocketsphinx
+	pip install –-upgrade SpeechRecognition
+	pip install –-upgrade pyaudio
+	pip install –-upgrade pythonnet
+
+If you cannot install some package (I had troubles with "PocketSphinx"), go to https://www.lfd.uci.edu/~gohlke/pythonlibs/ and download package you need.
+
+Running commands below you will know what specific type of package you need (python version and processor type)
+	python --version
+	python -c "import struct;print(struct.calcsize('P') * 8)"
+
+Then you can install the downloaded package:
+	python –m pip install path\názov_stiahnutého_modulu

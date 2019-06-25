@@ -1,0 +1,4 @@
+E:\Projects\Github_Init\YouTubeCrawler\bin\Release\YoutubeSearch.dll
+E:\Projects\Github_Init\YouTubeCrawler\YoutubeSearch\obj\x64\Release\YoutubeSearch.csprojAssemblyReference.cache
+E:\Projects\Github_Init\YouTubeCrawler\YoutubeSearch\obj\x64\Release\YoutubeSearch.csproj.CoreCompileInputs.cache
+E:\Projects\Github_Init\YouTubeCrawler\YoutubeSearch\obj\x64\Release\YoutubeSearch.dll

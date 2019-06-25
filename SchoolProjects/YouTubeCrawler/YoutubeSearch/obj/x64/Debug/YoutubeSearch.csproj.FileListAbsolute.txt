@@ -1,0 +1,11 @@
+E:\Projects\Github_Init\NightCrawler\bin\Debug\YoutubeSearch.dll
+E:\Projects\Github_Init\NightCrawler\bin\Debug\YoutubeSearch.pdb
+E:\Projects\Github_Init\NightCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.csprojAssemblyReference.cache
+E:\Projects\Github_Init\NightCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.csproj.CoreCompileInputs.cache
+E:\Projects\Github_Init\NightCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.dll
+E:\Projects\Github_Init\NightCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.pdb
+E:\Projects\Github_Init\YouTubeCrawler\bin\Debug\YoutubeSearch.dll
+E:\Projects\Github_Init\YouTubeCrawler\bin\Debug\YoutubeSearch.pdb
+E:\Projects\Github_Init\YouTubeCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.csproj.CoreCompileInputs.cache
+E:\Projects\Github_Init\YouTubeCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.dll
+E:\Projects\Github_Init\YouTubeCrawler\YoutubeSearch\obj\x64\Debug\YoutubeSearch.pdb

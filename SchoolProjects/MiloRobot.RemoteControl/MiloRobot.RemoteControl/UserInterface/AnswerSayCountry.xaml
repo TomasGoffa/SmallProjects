@@ -1,0 +1,74 @@
+﻿<Window x:Class="MiloRobot.RemoteControl.UserInterface.AnswerSayCountry"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiloRobot.RemoteControl.UserInterface"
+        mc:Ignorable="d"
+        Title="Answer" Height="175" Width="300"
+        ResizeMode="NoResize"
+        MouseLeftButtonDown="WindowMouseLeftButtonDown"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="2"
+        BorderBrush="Black"
+        WindowStyle="None"
+        Topmost="True"
+        Background="#222222">
+    
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Label Name="InsertGoogleKeyTextBlock"
+                   Grid.Row="0"
+                   Width="Auto"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Content="Write your answer"
+                   Style="{DynamicResource ResourceKey=HeaderStyle}" />
+
+        <TextBox Name="AnswerTextBox"
+                 Grid.Row="1"
+                 Width="240"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Style="{DynamicResource ResourceKey=TextBoxStyle}" />
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="150" />
+            </Grid.ColumnDefinitions>
+
+            <Button Name="SendBtn"
+                    Grid.Column="0"
+                    IsDefault="True"
+                    HorizontalAlignment="Left"
+                    Margin="30,0,0,0"
+                    Width="100"
+                    Content="Send"
+                    Click="SendBtn_Click"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="CloseBtn"
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,30,0"
+                    Width="100"
+                    Content="Close"
+                    Click="CloseBtn_Click"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" />
+        </Grid>
+    </Grid>
+</Window>

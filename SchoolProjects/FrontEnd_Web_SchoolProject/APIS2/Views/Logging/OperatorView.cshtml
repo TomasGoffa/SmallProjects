@@ -1,0 +1,53 @@
+﻿@model APIS2.Models.OperatorPage
+
+@{
+    ViewBag.Title = "MicroTech";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div>
+
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div>@Html.LabelFor(model => model.Orders)</div>
+        <div>
+            @Html.DropDownListFor(model => model.Orders, new SelectList(Model.AllOrders, "Value", "Text"), new { style = "width: 500px;" })
+            @Html.ValidationMessageFor(model => model.Orders)
+        </div>
+
+        <br />
+
+        <div>
+            <input type="submit" value="Confirm Order" name="action:ConfirmOrder" />
+        </div>
+
+        <p>
+            <h4 align="left">Process One</h4>
+            <img src="~/Images/ProcessOne.jpg" height="100" name="ProcessOneImage" />
+        </p>
+        <p>
+            <h4 align="left">Process Two</h4>
+            <img src="~/Images/ProcessOne.jpg" height="100" name="ProcessTwoImage" />
+        </p>
+        <p>
+            <h4 align="left">Process Three</h4>
+            <img src="~/Images/ProcessOne.jpg" height="100" name="ProcessThreeImage" />
+        </p>
+        <br />
+
+        <input type="submit" value="Stop" name="action:StartStop" />
+
+        <br />
+        <br />
+        <p>
+            @Html.ActionLink("Log out", "LoggingView")
+        </p>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

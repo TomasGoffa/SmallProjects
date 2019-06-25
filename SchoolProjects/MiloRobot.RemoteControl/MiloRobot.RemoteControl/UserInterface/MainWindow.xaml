@@ -1,0 +1,387 @@
+﻿<Window x:Class="MiloRobot.RemoteControl.UserInterface.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MiloRobot.RemoteControl.UserInterface"
+        mc:Ignorable="d"
+        Title="Milo" Height="610" Width="810"
+        ResizeMode="NoResize"
+        MouseLeftButtonDown="WindowMouseLeftButtonDown"
+        WindowStartupLocation="CenterScreen"
+        Closing="MainWindow_CLosing"
+        BorderThickness="2"
+        BorderBrush="Black"
+        WindowStyle="None"
+        Background="#222222">
+
+    <x:Code>
+        <![CDATA[            
+        private void WindowMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+    ]]>
+    </x:Code>
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="170" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="420" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="150" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Label Name="EmotionsLabel"
+                Grid.Row="0"
+                Content="Emotions"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Right"
+                Style="{DynamicResource ResourceKey=HeaderStyle}" />
+
+            <Button Name="AngryBtn"
+                Grid.Row="1"
+                Content="Angry"
+                HorizontalAlignment="Right"
+                Click="AngryBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="DenialBtn"
+                Grid.Row="2"
+                Content="Denial"
+                HorizontalAlignment="Right"
+                Click="DenialBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="EnragedBtn"
+                Grid.Row="3"
+                Content="Enraged"
+                HorizontalAlignment="Right"
+                Click="EnragedBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="FearBtn"
+                Grid.Row="4"
+                Content="Fear"
+                HorizontalAlignment="Right"
+                Click="FearBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="HappyBtn"
+                Grid.Row="5"
+                Content="Happy"
+                HorizontalAlignment="Right"
+                Click="HappyBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="PanicBtn"
+                Grid.Row="6"
+                Content="Panic"
+                HorizontalAlignment="Right"
+                Click="PanicBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="SadBtn"
+                Grid.Row="7"
+                Content="Sad"
+                HorizontalAlignment="Right"
+                Click="SadBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="ScaredBtn"
+                Grid.Row="8"
+                Content="Scared"
+                HorizontalAlignment="Right"
+                Click="ScaredBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="SurpriseBtn"
+                Grid.Row="9"
+                Content="Surprise"
+                HorizontalAlignment="Right"
+                Click="SurpriseBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="YawnBtn"
+                Grid.Row="10"
+                Content="Yawn"
+                HorizontalAlignment="Right"
+                Click="YawnBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="DefaultBtn"
+                Grid.Row="11"
+                Content="Default"
+                HorizontalAlignment="Right"
+                Click="DefaultBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+        </Grid>
+
+        <Separator
+            Grid.Column="1"
+            Style="{DynamicResource ResourceKey=VerticalSeparatorStyle}" />
+
+        <Grid Grid.Column="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="150" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+
+            <Label Name="GamesLabel"
+                Grid.Row="0"
+                Content="Games"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="30,0,0,0"
+                Style="{DynamicResource ResourceKey=HeaderStyle}" />
+
+            <Button Name="GuessAnimalBtn"
+                Grid.Row="1"
+                Content="Guess Animal"
+                HorizontalAlignment="Left"
+                Click="GuessAnimalBtn_Click"
+                Margin="30,0,0,0"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="GuessAnimalAnswerBtn"
+                    Grid.Row="1"
+                    HorizontalAlignment="Left"
+                    Margin="190, 0, 0, 0"
+                    Width="30"
+                    Click="GuessAnimalAnswerBtn_Click"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" >
+                <Path Fill="{StaticResource LabelColor}" Data="M 0 0 L 0 14 L 7 7 Z" />
+            </Button>
+
+            <Button Name="SayCountryBtn"
+                Grid.Row="2"
+                Content="Say Country"
+                HorizontalAlignment="Left"
+                Margin="30,0,0,0"
+                Click="SayCountryBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="SayCountryAnswerBtn"
+                    Grid.Row="2"
+                    HorizontalAlignment="Left"
+                    Margin="190, 0, 0, 0"
+                    Width="30"
+                    Click="SayCountryAnswerBtn_Click"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" >
+                <Path Fill="{StaticResource LabelColor}" Data="M 0 0 L 0 14 L 7 7 Z" />
+            </Button>
+
+            <Button Name="MusicPlayerBtn"
+                    Grid.Row="3"
+                    HorizontalAlignment="Left"
+                    Margin="30,0,0,0"
+                    Click="MusicPlayerBtn_Click"
+                    Content="Music Player"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Button Name="PresentationCycleBtn"
+                    Grid.Row="4"
+                    HorizontalAlignment="Left"
+                    Margin="30,0,0,0"
+                    Click="PresentationCycleBtn_Click"
+                    Content="Presentation"
+                    Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <TextBox Name="SpeakTextBox"
+                Grid.Row="6"
+                Width="420"
+                Height="140"
+                HorizontalAlignment="Center"
+                FontSize="15"
+                HorizontalContentAlignment="Left"
+                VerticalContentAlignment="Top"
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Disabled"
+                TextWrapping="Wrap"
+                Foreground="#CC0800"
+                Style="{DynamicResource ResourceKey=TextBoxStyle}" />
+
+            <Button Name="SpeakBtn"
+                Grid.Row="7"
+                Content="Speak"
+                HorizontalAlignment="Right"
+                Click="SpeakBtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+        </Grid>
+
+        <Separator
+            Grid.Column="3"
+            Style="{DynamicResource ResourceKey=VerticalSeparatorStyle}" />
+
+        <Grid Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="70" />
+            </Grid.RowDefinitions>
+
+            <Label Name="ConnectionLabel"
+                Grid.Row="0"
+                Content="Connection"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=HeaderStyle}" Margin="0,9" />
+
+            <Label Name="IPAddressLabel"
+                Grid.Row="1"
+                Content="IP Address"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=LabelStyle}" />
+
+            <TextBox Name="IPAddressTextBox"
+                Grid.Row="2"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=TextBoxStyle}" />
+
+            <Label Name="UsernameLabel"
+                Grid.Row="3"
+                Content="User name"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=LabelStyle}" />
+
+            <TextBox Name="UsernameTextBox"
+                Grid.Row="4"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=TextBoxStyle}" />
+
+            <Label Name="PasswordLabel"
+                Grid.Row="5"
+                Content="Password"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=LabelStyle}" />
+
+            <PasswordBox Name="PasswordPasswordBox"
+                Grid.Row="6"
+                HorizontalAlignment="Left"
+                Style="{DynamicResource ResourceKey=PasswordBoxStyle}" />
+
+            <Button Name="ConnectButton"
+                Grid.Row="7"
+                Content="Connect"
+                HorizontalAlignment="Left"
+                Click="ConnectButton_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Label Name="ConnectionStatusLabel"
+                Grid.Row="8"
+                Content="Disconnected"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                HorizontalContentAlignment="Center"
+                Width="auto"
+                MaxWidth="420"
+                Style="{DynamicResource ResourceKey=LabelStyle}" />
+
+            <Label Name="MovementLabel"
+                Grid.Row="9"
+                Content="Movement"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Style="{DynamicResource ResourceKey=HeaderStyle}" Margin="0,9" />
+
+            <ComboBox Name="AlternativeCommandComboBox"
+                Grid.Row="10"
+                Width="150"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Style="{DynamicResource ResourceKey=ComboBoxStyle}">
+                <ComboBox.ItemContainerStyle>
+                    <Style TargetType="{x:Type ComboBoxItem}">
+                        <Setter Property="Background" Value="{StaticResource BackgroundColor}" />
+                        <Setter Property="Foreground" Value="{StaticResource LabelColor}" />
+                    </Style>
+                </ComboBox.ItemContainerStyle>
+            </ComboBox>
+
+            <Button Name="Movementbtn"
+                Grid.Row="11"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Content="Run Command"
+                Click="Movementbtn_Click"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+
+            <Grid Grid.Row="12">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85" />
+                    <ColumnDefinition Width="85" />
+                </Grid.ColumnDefinitions>
+
+                <Image Name="ShutdownBtn"
+                    Grid.Column="0"
+                    Width="30"
+                    Height="30"
+                    MouseDown="ShutdownBtn_Click"
+                    VerticalAlignment="Top"
+                    ToolTip="Shutdown Milo"
+                    Source="Shutdown_Icon.bmp" />
+
+                <Image Name="RebootBtn"
+                    Grid.Column="1"
+                    Width="30"
+                    Height="30"
+                    MouseDown="RebootBtn_Click"
+                    VerticalAlignment="Top"
+                    ToolTip="Reboot Milo"
+                    Source="Reboot_Icon.bmp" />
+            </Grid>
+
+            <Button Name="CloseBtn"
+                Grid.Row="13"
+                Content="Close"
+                HorizontalAlignment="Left"
+                Click="CloseBtn_Click"
+                Height="50"
+                FontSize="24"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" />
+        </Grid>
+    </Grid>
+</Window>

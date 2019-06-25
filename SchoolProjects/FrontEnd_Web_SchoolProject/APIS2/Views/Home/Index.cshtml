@@ -1,0 +1,84 @@
+﻿@model APIS2.Models.CustomerPage
+
+@{
+    ViewBag.Title = "MicroTech";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>You can design your own processor.</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div>@Html.LabelFor(model => model.ProcessorType)</div>
+        <div>
+            @Html.DropDownListFor(model => model.ProcessorType, new SelectList(Model.PossibleProcesssorTypes, "Value", "Text"), new { style = "width: 200px;" })
+            @Html.ValidationMessageFor(model => model.ProcessorType)
+        </div>
+
+        <div>@Html.LabelFor(model => model.FlashMemory)</div>
+        <div>
+            @Html.DropDownListFor(model => model.FlashMemory, new SelectList(Model.PossibleFlashMemory, "Value", "Text"), new { style = "width: 200px;" })
+            @Html.ValidationMessageFor(model => model.FlashMemory)
+        </div>
+
+        <div>@Html.LabelFor(model => model.RamMemory)</div>
+        <div>
+            @Html.DropDownListFor(model => model.RamMemory, new SelectList(Model.PossibleRamMemory, "Value", "Text"), new { style = "width: 200px;" })
+            @Html.ValidationMessageFor(model => model.RamMemory)
+        </div>
+
+        <div>@Html.LabelFor(model => model.Eeprom)</div>
+        <div>
+            @Html.DropDownListFor(model => model.Eeprom, new SelectList(Model.PossibleEeprom, "Value", "Text"), new { style = "width: 200px;" })
+            @Html.ValidationMessageFor(model => model.Eeprom)
+        </div>
+
+        <div>@Html.LabelFor(model => model.Frequency)</div>
+        <div>
+            @Html.DropDownListFor(model => model.Frequency, new SelectList(Model.PossibleFrequency, "Value", "Text"), new { style = "width: 200px;" })
+            @Html.ValidationMessageFor(model => model.Frequency)
+        </div>
+
+        <div>@Html.LabelFor(model => model.NumberOfChips)</div>
+        <div>
+            @Html.TextBoxFor(model => model.NumberOfChips, new { style = "width: 200px;" })
+            @Html.ValidationMessageFor(model => model.NumberOfChips, "", new { @class = "text-danger" })
+        </div>
+
+        <br />
+        <br />
+
+        <div>
+            <input type="submit" value="Order" name="action:Order" />
+        </div>
+
+        <br />
+
+        <div>
+            <input type="submit" value="Login as employee" name="action:Login" />
+        </div>
+
+        <p>
+            <span style="color:red">@ViewBag.Message</span>
+        </p>
+    </div>
+	<br />
+    <br />
+}
+
+<aside align="left" float="left" width="30%" display="inline">
+    <h4>AT 89C</h4>
+    <p><img src="~/Images/at89c.jpeg" width="200" /></p>
+    <h4>ATTINY</h4>
+    <p><img src="~/Images/attiny.jpg" width="200" /></p>
+    <h4>PIC</h4>
+    <p><img src="~/Images/pic.jpg" width="200"/></p>
+</aside>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

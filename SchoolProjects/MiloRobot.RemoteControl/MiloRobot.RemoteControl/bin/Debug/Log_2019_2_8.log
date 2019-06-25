@@ -1,0 +1,4 @@
+08-Feb-19  7:44:06 PM: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MiloRobot.RemoteControl.Logic.MiloControl.Disconnect() in e:\Projects\Github_Init\MiloRobot.RemoteControl\MiloRobot.RemoteControl\Logic\MiloControl.cs:line 84
+08-Feb-19  7:44:07 PM: System.NullReferenceException: Object reference not set to an instance of an object.
+   at MiloRobot.RemoteControl.Logic.MiloControl.Disconnect() in e:\Projects\Github_Init\MiloRobot.RemoteControl\MiloRobot.RemoteControl\Logic\MiloControl.cs:line 84

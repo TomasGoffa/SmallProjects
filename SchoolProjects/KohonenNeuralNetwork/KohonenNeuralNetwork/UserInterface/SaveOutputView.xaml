@@ -1,0 +1,60 @@
+﻿<Window x:Class="KohonenNeuralNetwork.SaveOutputView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KohonenNeuralNetwork"
+        mc:Ignorable="d"
+        x:Name="SaveOutputWindow"
+        Title="SaveOutputView" Height="400" Width="400"
+        MouseLeftButtonDown="MoveWindow"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="2"
+        BorderBrush="Black"
+        WindowStyle="None"
+        Background="#222222">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Utilities/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+
+        <Label HorizontalAlignment="Center" Content="Save Output"
+            Width="Auto" Margin="0,10,0,0" Grid.Row="0"
+            Style="{DynamicResource ResourceKey=HeaderStyle}" />
+
+        <StackPanel Orientation="Vertical" Margin="20,0,0,0" Grid.Row="1" Width="360" HorizontalAlignment="Left">
+            <Label Content="Output Directory" Style="{DynamicResource ResourceKey=LabelStyle}" />
+            <TextBox Text="{Binding OutputDirectory, UpdateSourceTrigger=PropertyChanged}" Width="350"
+                     Style="{DynamicResource ResourceKey=TextBoxStyle}" />
+            <Button Content="Browse" Style="{DynamicResource ResourceKey=ButtonStyle}" Margin="0,6,0,0"
+                    Command="{Binding Browse}" />
+
+            <Label Content="Output file name" Style="{DynamicResource ResourceKey=LabelStyle}" Margin="0,20,0,0"/>
+            <TextBox Text="{Binding OutputFileName, UpdateSourceTrigger=PropertyChanged}" Width="200"
+                     Style="{DynamicResource ResourceKey=TextBoxStyle}" />
+
+            <CheckBox Content="Save output image" Style="{DynamicResource ResourceKey=CheckBoxStyle}"
+                      IsChecked="{Binding IsSaveImage}" HorizontalAlignment="Left" Width="Auto" Margin="0,20,0,0"/>
+            <CheckBox Content="Save centers of clusters in text file" Style="{DynamicResource ResourceKey=CheckBoxStyle}"
+                      IsChecked="{Binding IsSaveImage}" HorizontalAlignment="Left" Width="Auto" Margin="0,6,0,0"/>
+        </StackPanel>
+
+        <Button Content="Save" Style="{DynamicResource ResourceKey=ButtonStyle}" Margin="20,0,0,10" Grid.Row="2"
+                    Command="{Binding Save}" VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+
+        <Button Content="Close" Style="{DynamicResource ResourceKey=ButtonStyle}" Margin="0,0,20,10" Grid.Row="2"
+                    Command="{Binding Exit, Mode=OneWay}" CommandParameter="{Binding ElementName=SaveOutputWindow}" 
+                    VerticalAlignment="Bottom" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>

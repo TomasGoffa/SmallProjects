@@ -1,0 +1,86 @@
+﻿<Window x:Class="YouTubeCrawler.VideoCrawlerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:YouTubeCrawler"
+        mc:Ignorable="d"
+        Title="VideoCrawlerView" Height="500" Width="450"
+        MouseLeftButtonDown="MoveWindow"
+        WindowStartupLocation="CenterScreen"
+        BorderThickness="2"
+        BorderBrush="Black"
+        WindowStyle="None"
+        Background="#222222">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Utilities/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition />
+            <RowDefinition Height="80" />
+        </Grid.RowDefinitions>
+
+        <Label x:Name="HeaderLabel" Grid.Row="0" Style="{DynamicResource ResourceKey=HeaderStyle}"
+               Content="Youtube Crawler" Width="Auto"/>
+
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            
+            <ListView x:Name="TagListView" Style="{DynamicResource ResourceKey=ListViewStyle}"
+                    Height="300" Width="200" SelectionChanged="SelectedListViewItemChanged"
+                    ItemContainerStyle="{DynamicResource ResourceKey=ListViewContainerStyle}"
+                    Margin="15,0,0,0">
+
+            </ListView>
+
+            <StackPanel Orientation="Horizontal" Margin="15,0,0,0" VerticalAlignment="Bottom">
+                <TextBox x:Name="TxtBoxNewTag" Style="{DynamicResource ResourceKey=TextBoxStyle}"
+                        BorderThickness="1" BorderBrush="Black"/>
+
+                <Button x:Name="BtnAddNewTag" Style="{DynamicResource ResourceKey=ButtonStyle}" 
+                        Height="25" Width="40" Content="Add" Margin="10,0,0,0"
+                        Click="AddVideoTag"/>
+            </StackPanel>
+
+
+            <TextBlock x:Name="InfoLabel" Height="Auto" Width="200" TextWrapping="Wrap"
+                    Style="{DynamicResource ResourceKey=WindowMessageStyle}"
+                    Margin="0,0,15,0" Grid.Column="1" VerticalAlignment="Top" HorizontalAlignment="Right"
+                    Text="Edit video tags and set the number of pages you want to process for every tag. Then start crawling."/>
+
+            <StackPanel Orientation="Vertical" Margin="0,0,15,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Grid.Column="1">
+                <TextBlock x:Name="TxtBlockNumOfVideos" Style="{DynamicResource ResourceKey=WindowMessageStyle}"
+                           Text="Number of pages" />
+                <TextBox x:Name="TxtBoxNumOfVideos" Style="{DynamicResource ResourceKey=TextBoxStyle}" Margin="0,0,0,30"
+                         PreviewTextInput="NumberValidationTextBox"/>
+                <TextBlock x:Name="TxtBlockApiKey" Style="{DynamicResource ResourceKey=WindowMessageStyle}"
+                           Text="Google API Key" />
+                <TextBox x:Name="TxtBoxApiKey" Style="{DynamicResource ResourceKey=TextBoxStyle}" Margin="0,0,0,30" />
+                <Button x:Name="BtnDeleteTag" Style="{DynamicResource ResourceKey=ButtonStyle}" Height="25" Content="Delete" Click="DeleteVideoTag" />
+            </StackPanel>
+
+            
+        </Grid>
+
+        <Button x:Name="BtnCrawl" Grid.Row="2" Content="Start" Click="StartCrawling" Margin="15,0,0,15"
+                Style="{DynamicResource ResourceKey=ButtonStyle}"
+                HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+
+        <Button x:Name="BtnExit" Grid.Row="2" Content="Close" Click="CloseWindow" Margin="0,0,15,15"
+                Style="{DynamicResource ResourceKey=ButtonStyle}" 
+                HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
